@@ -1,5 +1,5 @@
 import std.stdio : writeln, writefln;
-import std.conv : to;
+import std.conv : to, ConvException;
 import std.algorithm.searching : canFind;
 
 int main(const string[] arg)
@@ -9,7 +9,15 @@ int main(const string[] arg)
         writefln("%s base", arg[0]);
         return 1;
     }
-    int base = to!int(arg[1]);
+    int base;
+    try {
+        base = to!int(arg[1]);
+    }
+    catch (ConvException e) {
+    	writeln("USAGE:");
+        writefln("%s base", arg[0]);
+        return 1;    	  
+    }
     int nb_line = 0;
     string[] lines;
     
