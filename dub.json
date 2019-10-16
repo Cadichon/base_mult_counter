@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"Léo Labruyère"
+	],
+	"copyright": "Copyright © 2019, Léo Labruyère",
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "base_mult_counter"
+}
