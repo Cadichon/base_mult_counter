@@ -3,7 +3,7 @@
 		"Léo Labruyère"
 	],
 	"copyright": "Copyright © 2019, Léo Labruyère",
-	"description": "A minimal D application.",
+	"description": "A minimal D program counting all the separate entries in a multiplication table, for a given base",
 	"license": "proprietary",
 	"name": "base_mult_counter"
 }
