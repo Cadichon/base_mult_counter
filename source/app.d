@@ -26,9 +26,9 @@ int main(const string[] arg)
         foreach (int j; 0..base) {
             string line;
             if (i > j)
-                line = to!string(j) ~ " " ~ to!string(i);
+                line = to!string(j) ~ " * " ~ to!string(i);
             else
-                line = to!string(i) ~ " " ~ to!string(j);
+                line = to!string(i) ~ " * " ~ to!string(j);
             if (!lines.canFind(line)) {
             	lines ~= line;
             }
@@ -37,6 +37,10 @@ int main(const string[] arg)
         }
     }
     writefln("there is %d lines", nb_line);
+    writeln();
+    foreach (string s; lines) {
+        writeln(s);
+    }
     writefln("there is %d unique lines", lines.length);
     return 0;
 }
