@@ -32,7 +32,7 @@ int main(const string[] arg)
             if (!lines.canFind(line)) {
             	lines ~= line;
             }
-	    writefln("%d * %d", i, j);
+            writefln("%d * %d", i, j);
             nb_line += 1;
         }
     }
