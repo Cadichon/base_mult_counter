@@ -5,7 +5,7 @@ import std.algorithm.searching : canFind;
 int main(const string[] arg)
 {
     if (arg.length != 2) {
-    	writeln("USAGE:");
+        writeln("USAGE:");
         writefln("%s base", arg[0]);
         return 1;
     }
@@ -14,13 +14,13 @@ int main(const string[] arg)
         base = to!int(arg[1]);
     }
     catch (ConvException e) {
-    	writeln("USAGE:");
+        writeln("USAGE:");
         writefln("%s base", arg[0]);
-        return 1;    	  
+        return 1;
     }
     int nb_line = 0;
     string[] lines;
-    
+
     foreach (int i; 0..base) {
         writefln("table for %d", i);
         foreach (int j; 0..base) {
@@ -30,7 +30,7 @@ int main(const string[] arg)
             else
                 line = to!string(i) ~ " * " ~ to!string(j);
             if (!lines.canFind(line)) {
-            	lines ~= line;
+                lines ~= line;
             }
             writefln("%d * %d", i, j);
             nb_line += 1;
